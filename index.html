@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libs practice</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <style>
+      body {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      .btn {
+        margin-bottom: 25px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      data-toggle="tooltip"
+      title="Tooltip?!"
+    >
+      Some bootstrap button with tooltip
+    </button>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Intresting fact!
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Some modal window with the most useful information ever!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">
+      Show bootstrap alert
+    </button>
+    <div id="liveAlertPlaceholder"></div>
+
+    <div id="date-of-birth"></div>
+
+    <div id="user-birth">
+
+        <div id="error-message" class="alert alert-danger mt-3 hidden">
+          Please, check if the format is correct!
+        </div>
+
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
