@@ -18,9 +18,13 @@ const appendAlert = (message, type) => {
 const alertTrigger = document.getElementById("liveAlertBtn");
 if (alertTrigger) {
   alertTrigger.addEventListener("click", () => {
-    appendAlert("It is a very bootstrap alert!", "success");
+    alertPlaceholder.style.display =
+      alertPlaceholder.style.display === "none" ? "block" : "none";
+
+    console.log("click");
   });
 }
+appendAlert("It is a very bootstrap alert!", "success");
 
 const birth = moment("2003-03-18");
 
@@ -46,5 +50,5 @@ if (dateRE.test(userDate)) {
   userBirthDiv.innerHTML = `Date of your birth: ${formattedNewBirth}`;
   userBirth.appendChild(userBirthDiv);
 } else {
-  errorMessage.classList.remove('hidden')
+  errorMessage.classList.remove("hidden");
 }
